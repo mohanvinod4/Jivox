@@ -58,7 +58,8 @@ class heapSort implements sortingInterface {
         }
 
         // Returns true when first number is less than second
-        return ($item1 < $item2 ? 1 : -1);
+	// Change the greater than symbol to lesser than you can sort in reverse order
+        return ($item1 > $item2 ? 1 : -1);
     }
 
     /*
@@ -125,23 +126,5 @@ class heapSort implements sortingInterface {
 		$parent = floor($place / 2);
 	}
     }
-}
-
-$heap = new heapSort();
-$heap->insert(19);
-$heap->insert(36);
-$heap->insert(54);
-$heap->insert(100);
-$heap->insert(17);
-$heap->insert(0);
-$heap->insert(3);
-$heap->insert(25);
-$heap->insert(1);
-$heap->insert(67);
-$heap->insert(2);
-$heap->insert(7);
-
-while (!$heap->isEmpty()) {
-    echo $heap->extract() . "\n";
 }
 

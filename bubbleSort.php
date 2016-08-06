@@ -43,7 +43,8 @@ class bubbleSort implements sortingInterface {
     public function compare($item1, $item2) {
         
         // Returns true when first number is less than second
-        return ($item1 < $item2 ? 1 : -1);
+	// Change the greater than symbol to lesser than you can sort in reverse order
+        return ($item1 > $item2 ? 1 : -1);
     }
 
     /*
@@ -75,26 +76,5 @@ class bubbleSort implements sortingInterface {
 		}
 	}
 
-    }
-}
-
-$bubble = new bubbleSort();
-$bubble->insert(19);
-$bubble->insert(36);
-$bubble->insert(54);
-$bubble->insert(100);
-$bubble->insert(17);
-$bubble->insert(0);
-$bubble->insert(3);
-$bubble->insert(25);
-$bubble->insert(1);
-$bubble->insert(67);
-$bubble->insert(2);
-$bubble->insert(7);
-
-if (!$bubble->isEmpty()) {
-    $sortedArray = $bubble->extract();
-    foreach($sortedArray as $value) {
-	echo $value . " ";
     }
 }
